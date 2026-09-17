@@ -29,3 +29,5 @@ stemmed_words = [porter_stemmer.stem(word) for word in nltk.word_tokenize(email_
 print("Original Email Content:", email_content)
 print("Stemmed Email Content:", " ".join(stemmed_words))
 
+#Task 3
+
