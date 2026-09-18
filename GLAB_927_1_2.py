@@ -11,7 +11,7 @@ print(f"NLTK library imported successfully! Version: {nltk_version}")
 
 #Task 2
 
-from nlkt.stem import PorterStemmer
+from nltk.stem import PorterStemmer
 
 #download NLTK resources (tokenizers)
 nltk.download('punkt')
