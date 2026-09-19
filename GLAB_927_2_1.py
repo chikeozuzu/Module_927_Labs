@@ -36,3 +36,5 @@ for entity in ner_results:
         entity_category = entity.label()
         print(f"{entity_name}: {entity_category}")
 
+# Task 3 Part-of-Speech (POS) Tagging to analyze business text
+
