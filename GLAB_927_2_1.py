@@ -26,3 +26,4 @@ for entity in ner_results:
     if isinstance(entity, nltk.Tree):
         print("".join([word for word, tag in entity.leaves()]))
 
+# Task 2 Named Entity Recognition (NER) to print entity categories
