@@ -23,3 +23,19 @@ messages = [
 result = llm.invoke(messages)
 print(result.content)
 
+# Task 3: Creating Advanced Prompt Chains
+
+from langchain.prompts import PromptTemplate
+from langchain.chains import LLMChain
+from langchain_groq import ChatGroq
+
+llm = ChatGroq(
+    model= "llama3-8b-8192"
+)
+
+# Step 1: Create the first prompt template to retrieve customer query details
+first_prompt_template = PromptTemplate(
+    input_variables=["customer_query"],
+    template="Extract the key information from the following customer query: {customer_query}"
+)
+
