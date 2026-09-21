@@ -20,3 +20,8 @@ blob = TextBlob(sample_text)
 # Perform sentiment analysis
 sentiment = blob.sentiment
 
+# Print the original text and sentiment analysis results
+print("Original Text:", sample_text)
+print("Sentiment Analysis Results:")
+print("Polarity:", sentiment.polarity) #Range from -1 (negative) to 1 (positive)
+print("Subjectivity:", sentiment.subjectivity) #Range from 0 (objective) to 1 (subjective)
