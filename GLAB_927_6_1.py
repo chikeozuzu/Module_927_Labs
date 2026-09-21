@@ -8,7 +8,7 @@ import os
 from langchain_groq import ChatGroq
 
 #Assigning the Groq API key to an environment variable
-os.environ["GROQ_API_KEY"] = "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"
+#os.environ["GROQ_API_KEY"] = "Add your Groq API key here"
 
 #Initialize LangChain with Groq Llama LLM
 llm = ChatGroq(
@@ -82,3 +82,20 @@ print("Customer Response:", customer_response)
 
 # Task 4: Optimizing and Evaluating Workflows
 
+# Prompt 1
+template1 = PromptTemplate(
+    input_variables=["customer_query"],
+    template="Extract the key information from the following customer query: {customer_query}"
+)
+
+# Prompt 2
+template2 = PromptTemplate(
+    input_variables=["extracted_info"],
+    template="Using the extracted information: {extracted_info}, retrieve the relevant order details."
+)
+
+# Prompt 3
+template3 = PromptTemplate(
+    input_variables=["order_details"],
+    template="Based on the following order details: {order_details}, generate a detailed response to address the customer's query."
+)
